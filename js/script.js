@@ -23,6 +23,15 @@ while (indexShopping < shoppingList.length) {
     let singleLi = document.createElement(`li`);
 
     //impostiamo l'elemento attribuendolo alla li designata.
+    singleLi.textContent = shoppingList[indexShopping];
+
+    //appendiamo gli LI a gli UL
+    printList.appendChild(singleLi);
+
+    //incremento del contatore 
+    indexShopping++;
+
+
     
 
 
