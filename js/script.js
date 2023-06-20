@@ -1,7 +1,7 @@
 // creo un array per i prodotti della spesa
 //stampiamo a schermo tutti i prodotti inseriti nell'array
 
-// array spesa
+// array shopping
 const shoppingList = [
     "Pane", 
     "Latte",
@@ -10,38 +10,31 @@ const shoppingList = [
     "Banane"
 ];
 
-//creiamo delle ul per inserirgli la lista della spesa stampata.
-let printList = document.createElement(`ul`);
+//we create uls to insert the printed shopping list to him.
+let ul = document.createElement(`ul`);
 
-//inilizializo il contatore
-let indexShopping = 0;
+//initialize the counter
+let i = 0;
 
-//usiamo un Ciclo while per stampare sul DOM
-while (indexShopping < shoppingList.length) {
+//let's use a While loop to print on the DOM
+while (i < shoppingList.length) {
 
-    //inizialiizzo le " li " stampate per appendere gli elementi
-    let singleLi = document.createElement(`li`);
+    //initialize the " li " printed to hang the elements
+    let li = document.createElement(`li`);
 
-    //impostiamo l'elemento attribuendolo alla li designata.
-    singleLi.textContent = shoppingList[indexShopping];
+    //we set the element by attributing it to the designated li.
+    li.textContent = shoppingList[i];
 
-    //appendiamo gli LI a gli UL
-    printList.appendChild(singleLi);
+    //append LI to UL
+    ul.appendChild(li);
 
-    //incremento del contatore 
-    indexShopping++;
-
-
-    
-
-
-
-
-
-
-
+    //counter increment 
+    i++;
 
 }
+document.body.appendChild(ul);
+
+// ho cambiato nomi alle classi e ora funziona, wooottt????
 
 
 
